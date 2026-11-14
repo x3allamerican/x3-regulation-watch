@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Regulation Watch: FMCSA, OSHA, PHMSA and Coast Guard Rule Changes | X3</title>
+<meta name="description" content="Free daily tracker of federal safety regulation changes: every amendment to the FMCSA, OSHA, PHMSA and Coast Guard rules, plus new final and proposed rules and open comment periods. Atom feeds for each.">
+<link rel="stylesheet" href="demo.css">
+<link rel="alternate" type="application/atom+xml" title="X3 Regulation Watch" href="feed.xml">
+<style>.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}.tabs button{margin:0}.tabs button.on{background:var(--cyan);color:#000}.tabs button:not(.on){background:transparent;color:var(--cyan2);border:1px solid var(--line)}</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="https://github.com/x3allamerican"><b>X3</b> Regulation Watch</a>
+  <nav><a href="feed.xml">Atom feed</a><a href="https://github.com/x3allamerican/x3-regulation-watch">Source on GitHub</a></nav>
+</header>
+<main>
+  <h1>What changed in <span>safety rules</span></h1>
+  <p class="lede">Every amendment to the FMCSA, OSHA, PHMSA and Coast Guard regulations from the official eCFR, plus new final rules, proposed rules and open comment periods from the Federal Register. Updated every day.</p>
+  <div class="tabs" id="tabs"></div>
+  <div class="kpis" id="kpis"></div>
+  <div class="grid">
+    <section class="box"><h2>Open for comment</h2><ul class="list" id="open"></ul></section>
+    <section class="box"><h2>Latest</h2><div class="row" style="margin:-4px 0 8px"><select id="kind"><option value="">Everything</option><option value="amendment">Amendments in effect</option><option value="final-rule">Final rules</option><option value="proposed-rule">Proposed rules</option></select></div><ul class="list" id="items" style="max-height:900px;overflow:auto"></ul></section>
+  </div>
+  <p class="small" style="margin-top:22px" id="foot"></p>
+</main>
+<footer>Free and open source (MIT) from X3: <a href="https://x3fleetsafety.com">X3 Fleet Safety</a> · <a href="https://x3workplacesafety.com">X3 Workplace Safety</a> · <a href="https://x3pipeline.com">X3 Pipeline</a> · <a href="https://x3maritime.com">X3 Maritime</a></footer>
+<script type="module">
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const fmt = (d) => d ? new Date(d + 'T12:00:00Z').toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) : '';
+const data = await (await fetch('data.json')).json();
+let cur = new URLSearchParams(location.search).get('g') || data.groups[0].id;
+const label = { amendment: ['Amended', 'ok'], 'final-rule': ['Final rule', 'warn'], 'proposed-rule': ['Proposed', 'bad'] };
+function item(x) {
+  const [l, c] = label[x.kind];
+  const head = x.kind === 'amendment' ? esc(x.name) : esc(x.title);
+  const sub = x.kind === 'amendment' ? esc(x.citation) : [x.cfr?.join(', '), x.commentsClose && `comments close ${fmt(x.commentsClose)}`, x.effective && `effective ${fmt(x.effective)}`].filter(Boolean).map(esc).join(' · ');
+  return `<li><span class="pill ${c}">${l}</span> <span class="small">${fmt(x.date)}</span><br><a href="${esc(x.url)}" target="_blank" rel="noopener">${head}</a><br><span class="small">${sub}</span></li>`;
+}
+function render() {
+  const g = data.groups.find((x) => x.id === cur) ?? data.groups[0];
+  $('tabs').innerHTML = data.groups.map((x) => `<button class="${x.id === g.id ? 'on' : ''}" data-g="${x.id}">${esc(x.name)}</button>`).join('');
+  document.querySelectorAll('[data-g]').forEach((b) => b.onclick = () => { cur = b.dataset.g; history.replaceState(null, '', `?g=${cur}`); render(); });
+  $('kpis').innerHTML = [[g.counts.amendments, `Amendments, last ${data.lookbackDays} days`], [g.counts.finalRules, `Final rules, last ${data.federalRegisterDays} days`], [g.counts.proposedRules, 'Proposed rules'], [g.counts.openComments, 'Open for comment']].map(([v, k]) => `<div class="kpi"><b>${v}</b><span>${k}</span></div>`).join('');
+  $('open').innerHTML = g.openComments.length ? g.openComments.map(item).join('') : '<li class="small">No open comment periods right now.</li>';
+  const k = $('kind').value;
+  $('items').innerHTML = g.items.filter((x) => !k || x.kind === k).slice(0, 200).map(item).join('') || '<li class="small">Nothing in this period.</li>';
+  $('foot').innerHTML = `Watching ${g.watching.map(esc).join('; ')}. Feed for this group: <a href="${g.id}.xml">${g.id}.xml</a>. Updated ${new Date(data.updated).toLocaleString()}. Sources: eCFR and Federal Register APIs. Not legal advice. Built by <a href="${g.site}">${esc(new URL(g.site).hostname)}</a>.`;
+}
+$('kind').onchange = render;
+render();
+</script>
+</body>
+</html>

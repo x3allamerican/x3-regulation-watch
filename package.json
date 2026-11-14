@@ -1,0 +1,11 @@
+{
+  "name": "@x3/regulation-watch",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Daily tracker of FMCSA, OSHA, PHMSA and Coast Guard regulation changes from the eCFR and Federal Register, with Atom feeds.",
+  "type": "module",
+  "scripts": { "update": "node scripts/update.mjs" },
+  "license": "MIT",
+  "author": "X3 All-American (https://github.com/x3allamerican)",
+  "engines": { "node": ">=18" }
+}

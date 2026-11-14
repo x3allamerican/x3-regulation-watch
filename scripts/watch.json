@@ -1,0 +1,125 @@
+{
+  "lookbackDays": 365,
+  "federalRegisterDays": 120,
+  "groups": [
+    {
+      "id": "fleet",
+      "name": "Fleet safety (FMCSA)",
+      "site": "https://x3fleetsafety.com",
+      "agencies": [
+        "federal-motor-carrier-safety-administration"
+      ],
+      "cfr": [
+        {
+          "title": 49,
+          "parts": [
+            "40",
+            "380",
+            "382",
+            "383",
+            "385",
+            "387",
+            "390",
+            "391",
+            "392",
+            "393",
+            "395",
+            "396"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "workplace",
+      "name": "Workplace safety (OSHA)",
+      "site": "https://x3workplacesafety.com",
+      "agencies": [
+        "occupational-safety-and-health-administration"
+      ],
+      "cfr": [
+        {
+          "title": 29,
+          "parts": [
+            "1904",
+            "1910",
+            "1926"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pipeline",
+      "name": "Pipeline and hazmat (PHMSA)",
+      "site": "https://x3pipeline.com",
+      "agencies": [
+        "pipeline-and-hazardous-materials-safety-administration"
+      ],
+      "cfr": [
+        {
+          "title": 49,
+          "parts": [
+            "190",
+            "191",
+            "192",
+            "193",
+            "194",
+            "195",
+            "196",
+            "198",
+            "199",
+            "107",
+            "171",
+            "172",
+            "173",
+            "174",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maritime",
+      "name": "Maritime (Coast Guard)",
+      "site": "https://x3maritime.com",
+      "agencies": [
+        "coast-guard"
+      ],
+      "cfr": [
+        {
+          "title": 46,
+          "parts": [
+            "10",
+            "11",
+            "12",
+            "13",
+            "15",
+            "16",
+            "136",
+            "137",
+            "138",
+            "139",
+            "140",
+            "142",
+            "143",
+            "144"
+          ]
+        },
+        {
+          "title": 33,
+          "parts": [
+            "96",
+            "101",
+            "104",
+            "155",
+            "164"
+          ]
+        }
+      ]
+    }
+  ]
+}
