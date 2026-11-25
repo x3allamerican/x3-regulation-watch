@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T21:10:19.191Z",
+ "updated": "2026-11-25T20:28:43.634Z",
  "lookbackDays": 365,
  "federalRegisterDays": 120,
  "groups": [
@@ -4066,7 +4066,7 @@
     "33 CFR 96, 101, 104, 155, 164"
    ],
    "counts": {
-    "amendments": 76,
+    "amendments": 62,
     "finalRules": 2,
     "proposedRules": 1,
     "openComments": 1
@@ -4814,160 +4814,6 @@
      "removed": false,
      "citation": "33 CFR 155.1035",
      "url": "https://www.ecfr.gov/on/2025-12-31/title-33/section-155.1035"
-    },
-    {
-     "kind": "amendment",
-     "date": "2025-11-24",
-     "title": 46,
-     "part": "11",
-     "identifier": "11.301",
-     "name": "§ 11.301 Requirements for STCW officer endorsements.",
-     "removed": false,
-     "citation": "46 CFR 11.301",
-     "url": "https://www.ecfr.gov/on/2025-11-24/title-46/section-11.301"
-    },
-    {
-     "kind": "amendment",
-     "date": "2025-11-24",
-     "title": 46,
-     "part": "11",
-     "identifier": "11.491",
-     "name": "§ 11.491 National officer endorsements for service on offshore supply vessels.",
-     "removed": false,
-     "citation": "46 CFR 11.491",
-     "url": "https://www.ecfr.gov/on/2025-11-24/title-46/section-11.491"
-    },
-    {
-     "kind": "amendment",
-     "date": "2025-11-24",
-     "title": 46,
-     "part": "11",
-     "identifier": "11.551",
-     "name": "§ 11.551 Endorsements for service on offshore supply vessels.",
-     "removed": false,
-     "citation": "46 CFR 11.551",
-     "url": "https://www.ecfr.gov/on/2025-11-24/title-46/section-11.551"
-    },
-    {
-     "kind": "amendment",
-     "date": "2025-11-24",
-     "title": 46,
-     "part": "15",
-     "identifier": "15.105",
-     "name": "§ 15.105 General.",
-     "removed": false,
-     "citation": "46 CFR 15.105",
-     "url": "https://www.ecfr.gov/on/2025-11-24/title-46/section-15.105"
-    },
-    {
-     "kind": "amendment",
-     "date": "2025-11-24",
-     "title": 46,
-     "part": "15",
-     "identifier": "15.403",
-     "name": "§ 15.403 When credentials for ratings are required.",
-     "removed": false,
-     "citation": "46 CFR 15.403",
-     "url": "https://www.ecfr.gov/on/2025-11-24/title-46/section-15.403"
-    },
-    {
-     "kind": "amendment",
-     "date": "2025-11-24",
-     "title": 46,
-     "part": "15",
-     "identifier": "15.720",
-     "name": "§ 15.720 Use of non-U.S.-credentialed personnel.",
-     "removed": false,
-     "citation": "46 CFR 15.720",
-     "url": "https://www.ecfr.gov/on/2025-11-24/title-46/section-15.720"
-    },
-    {
-     "kind": "amendment",
-     "date": "2025-11-24",
-     "title": 46,
-     "part": "15",
-     "identifier": "15.1101",
-     "name": "§ 15.1101 General.",
-     "removed": false,
-     "citation": "46 CFR 15.1101",
-     "url": "https://www.ecfr.gov/on/2025-11-24/title-46/section-15.1101"
-    },
-    {
-     "kind": "amendment",
-     "date": "2025-11-24",
-     "title": 33,
-     "part": "155",
-     "identifier": "155.4025",
-     "name": "§ 155.4025 Definitions.",
-     "removed": false,
-     "citation": "33 CFR 155.4025",
-     "url": "https://www.ecfr.gov/on/2025-11-24/title-33/section-155.4025"
-    },
-    {
-     "kind": "amendment",
-     "date": "2025-11-24",
-     "title": 33,
-     "part": "155",
-     "identifier": "155.4030",
-     "name": "§ 155.4030 Required salvage and marine firefighting services to list in response plans.",
-     "removed": false,
-     "citation": "33 CFR 155.4030",
-     "url": "https://www.ecfr.gov/on/2025-11-24/title-33/section-155.4030"
-    },
-    {
-     "kind": "amendment",
-     "date": "2025-11-24",
-     "title": 33,
-     "part": "155",
-     "identifier": "155.4040",
-     "name": "§ 155.4040 Response times for each salvage and marine firefighting service.",
-     "removed": false,
-     "citation": "33 CFR 155.4040",
-     "url": "https://www.ecfr.gov/on/2025-11-24/title-33/section-155.4040"
-    },
-    {
-     "kind": "amendment",
-     "date": "2025-11-24",
-     "title": 33,
-     "part": "155",
-     "identifier": "155.5015",
-     "name": "§ 155.5015 Applicability.",
-     "removed": false,
-     "citation": "33 CFR 155.5015",
-     "url": "https://www.ecfr.gov/on/2025-11-24/title-33/section-155.5015"
-    },
-    {
-     "kind": "amendment",
-     "date": "2025-11-24",
-     "title": 33,
-     "part": "155",
-     "identifier": "155.5020",
-     "name": "§ 155.5020 Definitions.",
-     "removed": false,
-     "citation": "33 CFR 155.5020",
-     "url": "https://www.ecfr.gov/on/2025-11-24/title-33/section-155.5020"
-    },
-    {
-     "kind": "amendment",
-     "date": "2025-11-24",
-     "title": 33,
-     "part": "164",
-     "identifier": "164.01",
-     "name": "§ 164.01 Applicability.",
-     "removed": false,
-     "citation": "33 CFR 164.01",
-     "url": "https://www.ecfr.gov/on/2025-11-24/title-33/section-164.01"
-    },
-    {
-     "kind": "amendment",
-     "date": "2025-11-24",
-     "title": 33,
-     "part": "164",
-     "identifier": "164.39",
-     "name": "§ 164.39 Steering gear: Foreign tankers.",
-     "removed": false,
-     "citation": "33 CFR 164.39",
-     "url": "https://www.ecfr.gov/on/2025-11-24/title-33/section-164.39"
     }
    ]
   }
